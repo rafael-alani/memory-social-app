@@ -15,6 +15,7 @@ app.use("/posts", postRoutes);
 
 const CONNECTION_URL =
   "mongodb+srv://rafael:MainMid123@cluster0.ou2zfqx.mongodb.net/?retryWrites=true&w=majority";
+//mongodb+srv://rafael:<password>@cluster0.ou2zfqx.mongodb.net/?retryWrites=true&w=majority
 const PORT = process.env.PORT || 5000;
 
 mongoose
@@ -23,5 +24,3 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
   )
   .catch((error) => console.log(error));
-
-mongoose.set("useFindAndModify", false);
